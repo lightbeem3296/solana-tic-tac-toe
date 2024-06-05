@@ -1,1 +1,1 @@
-# 007.tic-tac-toe
+# tic-tac-toe
