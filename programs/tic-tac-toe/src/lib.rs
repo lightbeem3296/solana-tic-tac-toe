@@ -9,7 +9,9 @@ pub mod tic_tac_toe {
     use super::*;
 
     pub fn setup_game(ctx: Context<SetupGame>, player_two: Pubkey) -> Result<()> {
-        ctx.accounts.game.start([ctx.accounts.player_one.key(), player_two])
+        ctx.accounts
+            .game
+            .start([ctx.accounts.player_one.key(), player_two])
     }
 
     pub fn play(ctx: Context<Play>, tile: Tile) -> Result<()> {

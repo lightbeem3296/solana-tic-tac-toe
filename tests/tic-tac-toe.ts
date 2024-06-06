@@ -44,7 +44,8 @@ describe("tic-tac-toe", () => {
       .accounts({
         game: gameKeypair.publicKey,
         playerOne: playerOne.publicKey,
-      }).signers([gameKeypair])
+      })
+      .signers([gameKeypair])
       .rpc()
 
     let gameState = await program.account.game.fetch(gameKeypair.publicKey)
